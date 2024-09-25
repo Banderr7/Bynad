@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توصيل الطعام - توصيل البحرين</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* خلفية مريحة للعين */
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        .payment-icons img {
+            width: 50px; /* ضبط حجم الصور */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">توصيل البحرين</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carDelivery.html">طلب سيارة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foodDelivery.html">توصيل الطعام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="parcelDelivery.html">توصيل الطرود</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>توصيل الطعام</h1>
+        <div id="map"></div>
+        <div class="text-center mt-3">
+            <h3>اختر سائقًا قريبًا واملأ تفاصيل الطلب</h3>
+        </div>
+
+        <form>
+            <div class="mb-3">
+                <label for="restaurantName" class="form-label">اسم المطعم</label>
+                <input type="text" class="form-control" id="restaurantName" placeholder="اسم المطعم" required>
+            </div>
+            <div class="mb-3">
+                <label for="branchName" class="form-label">اسم الفرع</label>
+                <input type="text" class="form-control" id="branchName" placeholder="اسم الفرع" required>
+            </div>
+            <div class="mb-3">
+                <label for="mealName" class="form-label">اسم الوجبة</label>
+                <input type="text" class="form-control" id="mealName" placeholder="اسم الوجبة" required>
+            </div>
+            <div class="mb-3">
+                <label for="details" class="form-label">تفاصيل إضافية</label>
+                <textarea class="form-control" id="details" rows="3" placeholder="إضافات أو نواقص" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="deliveryPrice" class="form-label">سعر التوصيل المتوقع</label>
+                <input type="text" class="form-control" id="deliveryPrice" value="2 دينار" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">طلب توصيل الطعام</button>
+        </form>
+
+        <!-- قسم وسائل الدفع -->
+        <div class="mt-5">
+            <h2>وسائل الدفع المتاحة</h2>
+            <div class="payment-icons text-center">
+                <img src="path_to_your_payment_image1.png" alt="Payment Method 1">
+                <img src="path_to_your_payment_image2.png" alt="Payment Method 2">
+                <img src="path_to_your_payment_image3.png" alt="Payment Method 3">
+                <!-- أضف المزيد من صور وسائل الدفع حسب الحاجة -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script>
+        function initMap() {
+            // إعداد خريطة Google Maps
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 26.0667, lng: 50.5577}, // موقع البحرين
+                zoom: 13
+            });
+            // يمكنك إضافة علامة لسائق قريب أو أي ميزات أخرى هنا
+        }
+    </script>
+</body>
+</html>

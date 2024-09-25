@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توصيل الطرود - توصيل البحرين</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">توصيل البحرين</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carDelivery.html">طلب سيارة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foodDelivery.html">توصيل الطعام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="parcelDelivery.html">توصيل الطرود</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>توصيل الطرود</h1>
+        <form>
+            <div class="mb-3">
+                <label for="senderName" class="form-label">اسم المرسل</label>
+                <input type="text" class="form-control" id="senderName" placeholder="اسم المرسل">
+            </div>
+            <div class="mb-3">
+                <label for="senderPhone" class="form-label">رقم هاتف المرسل</label>
+                <input type="text" class="form-control" id="senderPhone" placeholder="رقم هاتف المرسل">
+            </div>
+            <div class="mb-3">
+                <label for="pickupAddress" class="form-label">عنوان المرسل</label>
+                <input type="text" class="form-control" id="pickupAddress" placeholder="العنوان">
+            </div>
+            <div class="mb-3">
+                <label for="destinationName" class="form-label">اسم المستلم</label>
+                <input type="text" class="form-control" id="destinationName" placeholder="اسم المستلم">
+            </div>
+            <div class="mb-3">
+                <label for="destinationPhone" class="form-label">رقم هاتف المستلم</label>
+                <input type="text" class="form-control" id="destinationPhone" placeholder="رقم هاتف المستلم">
+            </div>
+            <div class="mb-3">
+                <label for="deliveryPrice" class="form-label">سعر التوصيل المتوقع</label>
+                <input type="text" class="form-control" id="deliveryPrice" value="1.5 دينار" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">طلب توصيل الطرد</button>
+        </form>
+    </div>
+</body>
+</html>
